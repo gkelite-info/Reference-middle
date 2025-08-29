@@ -1,0 +1,12 @@
+{
+  "window.autoDetectColorScheme": true,
+  "window.density.editorTabHeight": "default",
+  "window.commandCenter": true,
+  "terminal.explorerKind": "integrated",
+  "workbench.activityBar.iconClickBehavior": "toggle",
+  "workbench.activityBar.location": "default",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.editor.decorations.colors": false,
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.sideBar.location": "left"
+}
