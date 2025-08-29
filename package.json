@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start",
-    "lint": "next lint"
+    "predeploy": "npm run build && echo. > out/.nojekyll",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -28,6 +27,7 @@
     "@types/node": "24.3.0",
     "@types/react": "19.1.10",
     "eslint": "^9",
-    "eslint-config-next": "15.1.1"
+    "eslint-config-next": "15.1.1",
+    "gh-pages": "^6.3.0"
   }
 }

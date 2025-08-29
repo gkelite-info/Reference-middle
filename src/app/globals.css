@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif !important;
 }
 
 h1,

@@ -3,40 +3,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   const slides = [
-    {
-      src: "/assets/img/hero-carousel/img1.jpg",
-      alt: "img1",
-      title: "img1",
-      titleClass: 'slide-title-services',
-    },
-    {
-      src: "/assets/img/hero-carousel/img2.jpg",
-      alt: "img2",
-      title: "img2",
-      titleClass: 'slide-title-services',
-    },
-    {
-      src: "/assets/img/hero-carousel/img3.jpg",
-      alt: "img3",
-      title: "img3",
-      titleClass: 'slide-title-services',
-    },
-    {
-      src: "/assets/img/hero-carousel/img4.jpg",
-      alt: "img4",
-      title: "img4",
-      titleClass: 'slide-title-services',
-    },
-    {
-      src: "/assets/img/hero-carousel/img5.jpg",
-      alt: "img5",
-      title: "img5",
-      titleClass: 'slide-title-services',
-    },
+    { src: `${basePath}/assets/img/hero-carousel/img1.jpg`, alt: "img1", title: "img1", titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img2.jpg`, alt: "img2", title: "img2", titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img3.jpg`, alt: "img3", title: "img3", titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img4.jpg`, alt: "img4", title: "img4", titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img5.jpg`, alt: "img5", title: "img5", titleClass: "slide-title-services" },
   ];
 
   useEffect(() => {
