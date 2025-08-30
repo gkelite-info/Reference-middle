@@ -10,19 +10,19 @@ const HeroCarousel = () => {
 
 
   const slides = [
-    { src: `${basePath}/assets/img/hero-carousel/img1.jpg`, alt: "img1", title: "img1", titleClass: "slide-title-services" },
-    { src: `${basePath}/assets/img/hero-carousel/img2.jpg`, alt: "img2", title: "img2", titleClass: "slide-title-services" },
-    { src: `${basePath}/assets/img/hero-carousel/img3.jpg`, alt: "img3", title: "img3", titleClass: "slide-title-services" },
-    { src: `${basePath}/assets/img/hero-carousel/img4.jpg`, alt: "img4", title: "img4", titleClass: "slide-title-services" },
-    { src: `${basePath}/assets/img/hero-carousel/img5.jpg`, alt: "img5", title: "img5", titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img1.jpg`, alt: "img1", title: "img1", description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img2.jpg`, alt: "img2", title: "img2", description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img3.jpg`, alt: "img3", title: "img3", description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img4.jpg`, alt: "img4", title: "img4", description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', titleClass: "slide-title-services" },
+    { src: `${basePath}/assets/img/hero-carousel/img5.jpg`, alt: "img5", title: "img5", description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', titleClass: "slide-title-services" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // Auto-slide every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(interval); // Cleanup function to avoid memory leaks
+    return () => clearInterval(interval);
   }, []);
 
   const goToPrevious = () => {
@@ -43,11 +43,9 @@ const HeroCarousel = () => {
               <h2 className={`${slide.titleClass}`}>{slide.title}</h2>
               <p className="fs-6 fs-md-5">{slide.description}</p>
             </div>
-
           </div>
         ))}
 
-        {/* Navigation Controls */}
         <Link className="carousel-control-prev" href="#" onClick={goToPrevious}>
           <span className="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </Link>
